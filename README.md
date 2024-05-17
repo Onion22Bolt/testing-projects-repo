@@ -1,1 +1,1 @@
-# testing-projects-repo
+# test flask app for diploma work
