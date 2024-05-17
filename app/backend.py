@@ -1,9 +1,13 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 import socket
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
+def homepage():
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/api')
 def get_instance_info():
     instance_id = socket.gethostname()
     public_ip = socket.gethostbyname(instance_id)

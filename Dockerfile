@@ -3,9 +3,10 @@ FROM python:3.9
 WORKDIR /app
 
 COPY app/requirements.txt /app/requirements.txt
-COPY app/backend.py /app/backend.py
-
 RUN pip install -r requirements.txt
+
+COPY app/backend.py /app/backend.py
+COPY app/static /app/static
 
 ENV FLASK_APP=backend.py
 
