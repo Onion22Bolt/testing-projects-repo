@@ -1,11 +1,11 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, url_for
 import socket
 
 app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def homepage():
-    return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory(app.static_folder, 'index.html', 'popcat.jpg')
 
 @app.route('/api')
 def get_instance_info():
