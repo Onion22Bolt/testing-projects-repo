@@ -5,7 +5,7 @@ app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def homepage():
-    return send_from_directory(app.static_folder, 'index.html', 'popcat.jpg')
+    return send_from_directory(app.static_folder)
 
 @app.route('/api')
 def get_instance_info():
