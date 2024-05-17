@@ -10,7 +10,7 @@ COPY app/static /app/static
 
 ENV FLASK_APP=backend.py
 
-ENV FLASK_RUN_HOST=localhost
+ENV FLASK_RUN_HOST=0.0.0.0
 
 ENV FLASK_RUN_PORT=8080
 
