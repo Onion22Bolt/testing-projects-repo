@@ -1,7 +1,9 @@
-# Diploma's PP
-**a repository for testing diploma project's parts**
+# Installation Guide
+**TheHive**
 
-_Задачи:_
-  - Написать минимальный backend сервис на любом удобном вам языке, который просто отдает через JSON (instanceId и public айпи адрес). Код можете хранить на Github.
-  - Создать какой-нибудь index.html c картинкой, который будет перенаправлять на backend сервис
-  - Проверьте через URL, что сервис работает и при нажатии на картинку редиректит на backend
+_Задачи:_ 
+  1. configure secret key:
+cat > /etc/thehive/secret.conf << _EOF_
+play.http.secret.key="$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1)"
+_EOF_
+  2. татат
