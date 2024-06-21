@@ -3,7 +3,7 @@ FROM python:3.8-slim
 COPY app/requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . /app
+COPY app/backend.py /app/backend.py
 
 WORKDIR /app
 
